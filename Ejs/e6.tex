@@ -1,0 +1,52 @@
+\item Consideremos a $\C$ como un $\R$-EV y sea $T:\C\to\C$ dada por $T(z)=\bar{z}$.
+    \begin{enumerate}
+        \item Probar que $T$ es una transformación lineal.
+            \begin{mdframed}[style=s]
+                Sean $\alpha\in\R,u,v\in\C$
+                \begin{align*}
+                    T(\alpha u+v)&=\overline{\alpha u+v}\\
+                    &=\overline{\alpha u}+\overline{v}\\
+                    &=\overline{\alpha}\overline{u}+\overline{v}\\
+                    &=\alpha \overline{u}+\overline{v}\\
+                    &=\alpha T(u)+T(v)
+                \end{align*}
+                Por lo tanto, $T$ es una transformación lineal.
+            \end{mdframed}
+        \item Hallar la representación matricial $[T]_B$ para la base $B=\{1,i\}$ y $[T]_{\tilde{B}}$ para la base $\tilde{B}=\{1+i,1-i\}$.
+            \begin{mdframed}[style=s]
+                \begin{center}
+                    $\begin{cases}
+                        [T]_B=\left([T(1)]_B\quad[T(i)]_B\right)&\to[T]_B=\begin{pmatrix}
+                            1&0\\0&-1
+                        \end{pmatrix}\\
+                        [T]_{\tilde{B}}=\left([T(1+i)]_{\tilde{B}}\quad[T(1-i)]_{\tilde{B}}\right)&\to[T]_{\tilde{B}}=\begin{pmatrix}
+                            0&1\\1&0
+                        \end{pmatrix}
+                    \end{cases}$
+                \end{center}
+            \end{mdframed}
+        \item Hallar $P_{B,\tilde{B}}$ y $P_{\tilde{B},B}$.
+            \begin{mdframed}[style=s]
+                \[\begin{cases}
+                    P_{B,\tilde{B}}=\left([(1+i)]_B\quad[(1-i)]_B\right)&=\begin{pmatrix}
+                        1&1\\1&-1
+                    \end{pmatrix}\\
+                    P_{\tilde{B},B}=\left([(1)]_{\tilde{B}}\quad[(i)]_{\tilde{B}}\right)&=\begin{pmatrix}
+                        1/2&1/2\\1/2&-1/2
+                    \end{pmatrix}
+                \end{cases}\]
+            \end{mdframed}
+        \item Probar que $[T]_{\tilde{B}}=P_{\tilde{B},B}[T]_BP_{B,\tilde{B}}$,
+            \begin{mdframed}[style=s]
+                \[P_{\tilde{B},B}[T]_BP_{B,\tilde{B}}=\begin{pmatrix}
+                    1/2&1/2\\1/2&-1/2
+                \end{pmatrix}\begin{pmatrix}
+                    1&0\\0&-1
+                \end{pmatrix}\begin{pmatrix}
+                    1&1\\1&-1
+                \end{pmatrix}=\begin{pmatrix}
+                    0&1\\1&0
+                \end{pmatrix}\]
+                Con lo cual se demuestra la igualdad.
+            \end{mdframed}
+    \end{enumerate}

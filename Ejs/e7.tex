@@ -1,0 +1,41 @@
+\item Sea $T:\R^2[x]\to\R^3$, la transformación lineal dada por \[T(ax^2+bx+c)=(a+2b+c,a+b,2a+b-c).\]
+    \begin{enumerate}
+        \item Hallar una representación matricial de $T$.
+            \begin{mdframed}[style=s]
+                La más sencilla que se me ocurre es con respecto a $\E=\{(1,0,0),(0,1,0),(0,0,1)\}$ y $B=\{1,x,x^2\}$
+                \begin{center}
+                    $[T]_{\E,B}=\left([T(1)]_\E\quad[T(x)]_\E\quad[T(x^2)]_\E\right)$\\
+                    $\to [T]_{\E,B}=\left([(1,0,-1)]_\E\quad[(2,1,1)]_\E\quad[(1,1,2)]_\E\right)$\\
+                    $\to [T]_{\E,B}=\begin{pmatrix}
+                        1&2&1\\0&1&1\\-1&1&2
+                    \end{pmatrix}$ 
+                \end{center}
+            \end{mdframed}
+        \item Hallar la dimensión del núcleo y de la imagen.
+            \begin{mdframed}[style=s]
+                $N(T)=\{p\in\R_2[x]:T(p)=(0,0,0)\}$. Si $p(x)=ax^2+bx+c$. Entonces, me fijo en resolver
+                \begin{center}
+                    $\begin{pmatrix}
+                        1&2&1\\0&1&1\\-1&1&2
+                    \end{pmatrix}\begin{pmatrix}
+                        c\\b\\a
+                    \end{pmatrix}=\begin{pmatrix}
+                        0\\0\\0
+                    \end{pmatrix}\to\begin{cases}
+                        c+2b+a=0\\
+                        b+a=0\\
+                        -c+b+2a=0
+                    \end{cases}\to\begin{cases}
+                        b=-a\\
+                        c=a
+                    \end{cases}\to p(x)=a(x^2-x+1)$
+                \end{center}
+                Por lo tanto, se tiene que\[N(T)=\overline{\{x^2-x+1\}}\to dim(N(T))=1\]
+                Por el teorema de la dimensión:
+                \[dim(Im(T))=2\]
+            \end{mdframed}
+        \item Sea $W$ un subespacio de $\R^3$ tal que $W\oplus Im(T)=\R^3.$ Hallar $T^{-1}(W)$.
+            \begin{mdframed}[style=s]
+                Para que una transformación tenga inversa, la misma debe ser un isomorfismo, pero como $N(T)\neq \{\vec{0}\}$, $T$ no lo es.
+            \end{mdframed}
+    \end{enumerate}

@@ -1,0 +1,27 @@
+\item Sea $T:\R^3\to\R^3$, la transformación lineal dada por $T(x,y,z)=(2y+z,x-4y,3x)$.
+    \begin{enumerate}
+        \item Hallar $[T]_B$ para la base $B=\{(1,1,1);(1,1,0);(1,0,0)\}$ de $\R^3$.
+            \begin{mdframed}[style=s]
+                \begin{center}
+                    $[T]_B=\left([T(1,1,1)]_B\quad[(1,1,0)]_B\quad[(1,0,0)]_B\right)$\\
+                    $\to [T]_B=\begin{pmatrix}
+                        3&3&3\\-6&-6&-2\\6&5&-1
+                    \end{pmatrix}$
+                \end{center}
+            \end{mdframed}
+        \item Probar que $[T(v)]_B=[T]_B[v]_B$, para $v\in\R^3$.
+            \begin{mdframed}[style=s]
+                Por un lado se tiene que
+                \[[T(v)]_B=[T(x,y,z)]_B=[(2y+z,x-4y,3x)]_B=\begin{pmatrix}
+                    3x\\-2x-4y\\-x+6y+z
+                \end{pmatrix}\]
+                Por el otro lado
+                \[[T]_B[v]_B=\begin{pmatrix}
+                    3&3&3\\-6&-6&-2\\6&5&-1
+                \end{pmatrix}\begin{pmatrix}
+                    z\\y-z\\x-y
+                \end{pmatrix}=\begin{pmatrix}
+                    3x\\-2x-4y\\-x+6y+z
+                \end{pmatrix}\]
+            \end{mdframed}
+    \end{enumerate}

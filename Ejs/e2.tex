@@ -1,0 +1,43 @@
+\item Sea $T:\R^3\to\R^3$, la transformación lineal dada por $T(x,y,z)=(z,y+z,x+y+z)$.
+    \begin{enumerate}
+        \item Hallar la reprenstación matricial de $T$ con respecto a la base canónica de $\R^3$.
+            \begin{mdframed}[style=s]
+                \begin{center}
+                    $[T]_\E=\left([T(1,0,0)]_\E\quad[T(0,1,0)]_\E\quad[T(0,0,1)]_\E\right)$\\
+                    $[T]_\E=\begin{pmatrix}
+                        0&0&1\\0&1&1\\1&1&1
+                    \end{pmatrix}$
+                \end{center}
+            \end{mdframed}
+        \item Sea $B=\{(1,1,0),(1,2,3),(1,3,5)\}$. Hallar las matrices de cambio de base $P_{\E,B}$ y $P_{B,\E}$
+            \begin{mdframed}[style=s]
+                Para encontrar $P_{\E,B}$ tenemos que
+                \begin{center}
+                    $P_{\E,B}=\left([(1,1,0)]_\E\quad[(1,2,3)]_\E\quad[(1,3,5)]_\E\right)$\\
+                    $\to P_{\E,B}=\begin{pmatrix}
+                        1&1&1\\1&2&3\\0&3&5
+                    \end{pmatrix}$
+                \end{center}
+                Mientras que
+                \begin{center}
+                    $P_{B,\E}=\left([(1,0,0)]_B\quad[(0,1,0)]_B\quad[(0,0,1)]_B\right)$\\
+                    $\to P_{B,\E}=\begin{pmatrix}
+                        -1&2&-1\\5&-5&2\\-3&3&-1
+                    \end{pmatrix}$
+                \end{center}
+            \end{mdframed}
+        \item Hallar la reprenstación matricial de $T$ con respecto a la base $B$.
+            \begin{mdframed}[style=s]
+                \begin{center}
+                    $[T]_B=\left([T(1,1,0)]_B\quad[T(1,2,3)]_B\quad[T(1,3,5)]_B\right)$\\
+                    $\begin{cases}
+                        [T(1,1,0)]_B=[(0,1,2)]_B=P_{B,\E}\cdot(0,1,2)^T\\
+                        [T(1,2,3)]_B=[(3,5,6)]_B=P_{B,\E}\cdot(3,5,6)^T\\
+                        [T(1,3,5)]_B=[(5,8,9)]_B=P_{B,\E}\cdot(5,8,9)^T
+                    \end{cases}$\\
+                    $\to [T]_B=\begin{pmatrix}
+                        0&1&2\\1&2&3\\1&-6&0
+                    \end{pmatrix}$
+                \end{center}
+            \end{mdframed}
+    \end{enumerate}

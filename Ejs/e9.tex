@@ -1,0 +1,44 @@
+\item Sean $B=\{b_1,b_2,b_3\}$ una base de $\R^3$ y $\tilde{B}=\{c_1,c_2,c_3,c_4\}$ una base de $\R^4$. Sea $T\in L(\R^3,\R^4)$ tal que\[[T]_{\tilde{B},B}=\begin{pmatrix}
+        1&-2&1\\-1&1&1\\2&1&4\\3&-2&5
+    \end{pmatrix}.\]
+    \begin{enumerate}
+        \item Hallar $T(3b_1+2b_2-b_3)$ y decir cuáles son sus coordenadas en la base $\tilde{B}$.
+            \begin{mdframed}[style=s]
+                \[[T(3b_1+2b_2-b_3)]_{\tilde{B}}=\begin{pmatrix}
+                    1&-2&1\\-1&1&1\\2&1&4\\3&-2&5
+                \end{pmatrix}\begin{pmatrix}
+                    3\\2\\-1
+                \end{pmatrix}=\begin{pmatrix}
+                    -2\\-2\\4\\0
+                \end{pmatrix}\]
+            \end{mdframed}
+        \item Hallar una base para el núcleo y otra para la imagen de $T$.
+            \begin{mdframed}[style=s]
+                Para el núcleo
+                \[\begin{pmatrix}
+                    1&-2&1\\-1&1&1\\2&1&4\\3&-2&5
+                \end{pmatrix}\begin{pmatrix}
+                    x\\y\\z
+                \end{pmatrix}=\begin{pmatrix}
+                    0\\0\\0\\0
+                \end{pmatrix}\to x=y=z=0\to N(T)=\{\vec{0}\}\]
+                Un elemento de la imagen cumple
+                \[\begin{pmatrix}
+                    1&-2&1\\-1&1&1\\2&1&4\\3&-2&5
+                \end{pmatrix}\begin{pmatrix}
+                    x\\y\\z
+                \end{pmatrix}=x\begin{pmatrix}
+                    1\\-1\\2\\3
+                \end{pmatrix}+y\begin{pmatrix}
+                    -2\\1\\1\\-2
+                \end{pmatrix}+z\begin{pmatrix}
+                    1\\1\\4\\5
+                \end{pmatrix}\]
+                Por el teorema de la dimensión, sabemos que $dim(Im(T))=3$, por lo tanto una base de $Im(T)$ es
+                \[B=\{(1,-1,2,3),(-2,1,1,-2),(1,1,4,5)\}\]
+            \end{mdframed}
+        \item Hallar $T^{-1}(c_1-3c_3-c_4)$.
+            \begin{mdframed}[style=s]
+                Como $T$ no es un isomorfismo, no tiene inversa.
+            \end{mdframed}
+    \end{enumerate}

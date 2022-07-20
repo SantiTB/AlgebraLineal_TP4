@@ -1,0 +1,42 @@
+\item Sea $T:\C^2\to\C^2$ la transformación lineal dada por $T(x,y)=(y,0)$. Consideremos la base $B=\{(1,i),(-i,2)\}$ de $\C^2$ como $\C$-EV.
+    \begin{enumerate}
+        \item Hallar la representación matricial de $T$ con respecto a las bases $\E$ y $B$.\pagebreak
+            \begin{mdframed}[style=s]
+                \begin{center}
+                    $[T]_{B,\E}=\left([T(1,0)]_B\quad[T(0,1)]_B\right)$\\
+                    $\to [T]_{B,\E}=\begin{pmatrix}
+                        0&2\\0&-i
+                    \end{pmatrix}$
+                \end{center}
+            \end{mdframed}
+        \item Hallar la representación matricial de $T$ con respecto a las bases $B$ y $\E$.
+            \begin{mdframed}[style=s]
+                \begin{center}
+                    $[T]_{\E,B}=\left([T(1,i)]_\E\quad[T(-i,2)]_\E\right)$\\
+                    $\to [T]_{\E,B}=\begin{pmatrix}
+                        1&-i\\i&2
+                    \end{pmatrix}$
+                \end{center}
+            \end{mdframed}
+        \item Hallar la representación matricial de $T$ con respecto a la base $B$. Calcular el determinante y la traza.
+            \begin{mdframed}[style=s]
+                \begin{center}
+                    $[T]_B=\left([T(1,i)]_B\quad[T(-i,2)]_B\right)$\\
+                    $\to [T]_B=\begin{pmatrix}
+                        2i&4\\1&-2i
+                    \end{pmatrix}$\\
+                    $tr([T]_B)=0\qquad det([T]_B)=0$
+                \end{center}
+            \end{mdframed}
+        \item Elegir otra base de $\C^2$ y hallar la representación matricial de $T$ con respecto a esa base. ¿Puede decir cuánto valen el determinante y la traza sin hacer las cuentas? Justificar.
+            \begin{mdframed}[style=s]
+                Propongo $\tilde{B}=\{(i,0),(0,1)\}$
+                \begin{center}
+                    $[T]_{\tilde{B}}=\left([T(i,0)]_{\tilde{B}}\quad[T(0,1)]_{\tilde{B}}\right)$\\
+                    $\to [T]_{\tilde{B}}=\begin{pmatrix}
+                        0&-i\\0&0
+                    \end{pmatrix}$
+                \end{center}
+                La traza y el determinante son propias de la transformación, así que no importa la base, el resultado siempre será el mismo.
+            \end{mdframed}
+    \end{enumerate}
